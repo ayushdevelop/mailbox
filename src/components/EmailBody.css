@@ -1,0 +1,29 @@
+.email-layout {
+  margin: 10px;
+}
+.email-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin: 10px 5px;
+  border-bottom: solid 1px dodgerblue;
+}
+
+.email-header span,
+.emailSubject span {
+  font-size: 14px;
+  color: dodgerblue;
+}
+
+.emailSubject {
+  padding: 10px 5px;
+  margin: 20px 5px;
+  border-bottom: solid 1px dodgerblue;
+}
+
+.emailBody {
+  padding: 5px;
+  margin: 5px;
+  line-height: 30px;
+}

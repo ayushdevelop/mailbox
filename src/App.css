@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Spartan", sans-serif;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  padding-top: 10px;
+}
+
+.App .body {
+  width: 98vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.body .filter-column {
+  width: 10%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background: #282c34;
+}
+
+.body .email-column {
+  flex: 6;
+  margin-left: 20px;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+  overflow-x: hidden;
+  border-top: solid 0.1px #282c34;
+}
+
+.body .email-column:hover {
+  overflow-y: scroll;
+}
+
+div.email-column::-webkit-scrollbar {
+  width: 3px;
+}
+
+div.email-column::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+div.email-column::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background-color: dodgerblue;
+  opacity: 0.6;
+}
