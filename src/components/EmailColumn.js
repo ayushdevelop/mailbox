@@ -1,18 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { connect } from "react-redux";
 import { fetchEmailList, filteredEmailList } from "../actions/index";
 import EmailList from "./EmailList";
 
 const EmailListColumn = (props) => {
+  const [routeFilter, setRouteFilter] = useState("");
   const { filter } = useParams();
 
   //filtering emails on route change to set inbox as default tag
   useEffect(() => {
-    if (filter == "inbox") {
-      props.filteredEmailList(props.originalEmailList, filter);
+    setRouteFilter(filter);
+    if (!(routeFilter == "all")) {
+      props.filteredEmailList(props.originalEmailList, routeFilter);
+    } else {
+      props.fetchEmailList();
     }
-  }, [filter]);
+  }, [routeFilter]);
 
   return (
     <div>
