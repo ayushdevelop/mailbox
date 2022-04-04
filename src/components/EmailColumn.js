@@ -11,12 +11,24 @@ const EmailListColumn = (props) => {
   //filtering emails on route change to set inbox as default tag
   useEffect(() => {
     setRouteFilter(filter);
+    console.log("run");
+  });
+
+  useEffect(() => {
     if (!(routeFilter == "all")) {
       props.filteredEmailList(props.originalEmailList, routeFilter);
     } else {
       props.fetchEmailList();
     }
+    console.log("this ran");
   }, [routeFilter]);
+
+  //filtering emails on route change to set inbox as default tag
+  useEffect(() => {
+    if (filter == "inbox") {
+      props.filteredEmailList(props.originalEmailList, filter);
+    }
+  }, [filter]);
 
   return (
     <div>
