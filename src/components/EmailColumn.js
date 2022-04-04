@@ -11,7 +11,6 @@ const EmailListColumn = (props) => {
   //filtering emails on route change to set inbox as default tag
   useEffect(() => {
     setRouteFilter(filter);
-    console.log("run");
   });
 
   useEffect(() => {
@@ -20,7 +19,6 @@ const EmailListColumn = (props) => {
     } else {
       props.fetchEmailList();
     }
-    console.log("this ran");
   }, [routeFilter]);
 
   //filtering emails on route change to set inbox as default tag
